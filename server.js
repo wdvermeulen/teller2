@@ -2,7 +2,7 @@
 const WebSocketServer = require('ws').Server;
 const Crypto = require('crypto-js');
 
-const wss = new WebSocketServer({ port: 8081 });
+const wss = new WebSocketServer({ port: 8080 });
 const maxPeople = 330;
 const minPeople = 0;
 let people = 0;
