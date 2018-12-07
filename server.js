@@ -2,11 +2,10 @@
 const WebSocketServer = require('ws').Server;
 const Crypto = require('crypto-js');
 
-var ipaddress = process.env.OPENSHIFT_NODEJS_IP || "localhost";
-var port = process.env.OPENSHIFT_NODEJS_PORT || 8080;
+var port = process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080;
 const wss = new WebSocketServer({ port: port });
 
-console.log("Starting server on: " + ipaddress.toString() + ":" + port.toString());
+console.log("Starting server on: " + port.toString());
 
 const maxPeople = 330;
 const minPeople = 0;
